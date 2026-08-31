@@ -9,6 +9,7 @@ CodeCraftHub is a simple personalized learning platform designed for developers 
 - RESTful API for managing courses.
 
 ## Project Structure
+```
 code_craft_hub/
 │
 ├── app.py                      # Main application file
@@ -16,6 +17,7 @@ code_craft_hub/
 │   └── courses.json            # JSON file to store course data
 ├── requirements.txt            # Python package requirements
 └── README.md                   # Project documentation
+```
 
 ## Requirements
 

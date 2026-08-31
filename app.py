@@ -69,6 +69,31 @@ def get_courses():
     courses = read_data()
     return jsonify(courses), 200
 
+# Endpoint to get course statistics (GET /api/courses/stats)
+@app.route('/api/courses/stats', methods=['GET'])
+def get_course_stats():
+    courses = read_data()
+    
+    # Initialize counts for each valid status
+    status_counts = {
+        'Not Started': 0,
+        'In Progress': 0,
+        'Completed': 0
+    }
+    
+    # Aggregate stats
+    for course in courses:
+        status = course.get('status')
+        if status in status_counts:
+            status_counts[status] += 1
+
+    stats = {
+        'total_courses': len(courses),
+        'by_status': status_counts
+    }
+    
+    return jsonify(stats), 200
+
 # Endpoint to get a specific course by ID (GET /api/courses/<id>)
 @app.route('/api/courses/<int:course_id>', methods=['GET'])
 def get_course(course_id):
@@ -120,4 +145,3 @@ def delete_course(course_id):
 
 if __name__ == '__main__':
     app.run(debug=True)
-    
