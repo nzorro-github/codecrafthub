@@ -31,11 +31,13 @@ code_craft_hub/
    ```bash
    git clone https://github.com/nzorro-github/codecrafthub.git
    cd codecrafthub
+   ```
    
 
 ### Create a virtual environment (optional but recommended):
 
-```python -m venv venv
+```BASH
+python3 -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 ```
 
@@ -53,7 +55,7 @@ file present. You can start with an empty JSON file:
 ### Run the application:
 
 ```BASH
-python app.py
+python3 app.py
 ```
 
 ### Access the API:
