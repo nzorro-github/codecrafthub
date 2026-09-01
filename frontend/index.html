@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraftHub: Your Learning Management Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>CodeCraftHub: Your Learning Management Platform</h1>
+    </header>
+
+    <div id="notification"></div>
+    <div id="loader"><div class="spinner"></div><p style="margin-top:10px; color:var(--text-light);">Processing...</p></div>
+
+    <div class="card">
+        <h2>Add New Course</h2>
+        <form id="addCourseForm">
+            <div class="form-group">
+                <label for="name">Course Name *</label>
+                <input type="text" id="name" class="form-control" required placeholder="e.g., Advanced JavaScript">
+            </div>
+            <div class="form-group">
+                <label for="description">Description *</label>
+                <textarea id="description" class="form-control" required placeholder="Enter course details..."></textarea>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="target_date">Target Date *</label>
+                    <input type="date" id="target_date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status *</label>
+                    <select id="status" class="form-control" required>
+                        <option value="Not Started">Not Started</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Course</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Course Directory</h2>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Course Details</th>
+                        <th>Target Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="courseTableBody">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="editModal">
+    <div class="modal-content">
+        <h2>Edit Course</h2>
+        <form id="editCourseForm">
+            <input type="hidden" id="edit_id">
+            <div class="form-group">
+                <label for="edit_name">Course Name *</label>
+                <input type="text" id="edit_name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="edit_description">Description *</label>
+                <textarea id="edit_description" class="form-control" required></textarea>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="edit_target_date">Target Date *</label>
+                    <input type="date" id="edit_target_date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit_status">Status *</label>
+                    <select id="edit_status" class="form-control" required>
+                        <option value="Not Started">Not Started</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+            <div style="margin-top: 20px; text-align: right;">
+                <button type="button" class="btn btn-cancel" onclick="closeModal()">Cancel</button>
+                <button type="submit" class="btn btn-success">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
