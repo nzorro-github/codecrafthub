@@ -61,16 +61,18 @@ python app.py
 The application will run on
 http://127.0.0.1:5000/
 . You can use Postman or curl to interact with the API.
-API Endpoints
 
-GET /courses: Retrieve the list of all courses.
-POST /courses: Add a new course. (Example data format:
-{"name": "Course Name", "description": "Course Description", "target_completion_date": "YYYY-MM-DD", "status": "Not Started"}
+## API Endpoints
+
+GET /api/courses: Retrieve the list of all courses.
+POST /api/courses: Add a new course. (Example data format:
+{"name": "Course Name", "description": "Course Description", "target_date": "YYYY-MM-DD", "status": "Not Started"}
 )
-GET /courses/<course_id>: Retrieve a specific course by ID.
-PUT /courses/<course_id>: Update an existing course.
-DELETE /courses/<course_id>: Delete a course.
-Testing the Endpoints
+GET /api/courses/<course_id>: Retrieve a specific course by ID.
+PUT /api/courses/<course_id>: Update an existing course.
+DELETE /api/courses/<course_id>: Delete a course.
+
+## Testing the Endpoints
 
 You can use tools like Postman or
 ```curl```
