@@ -29,8 +29,8 @@ code_craft_hub/
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/nzorro-github/code_craft_hub.git
-   cd code_craft_hub
+   git clone https://github.com/nzorro-github/codecrafthub.git
+   cd codecrafthub
    
 
 ### Create a virtual environment (optional but recommended):
@@ -52,7 +52,9 @@ file present. You can start with an empty JSON file:
 
 ### Run the application:
 
-```python app.py``
+```BASH
+python app.py
+```
 
 ### Access the API:
 
@@ -76,11 +78,11 @@ to test the API endpoints:
 
 ### GET All Courses:
 
-```curl http://127.0.0.1:5000/courses```
+```curl http://127.0.0.1:5000/api/courses```
 
 ### Add a Course:
 
-```curl -X POST http://127.0.0.1:5000/courses -H "Content-Type: application/json" -d '{"name": "Learn Python", "description": "A comprehensive Python course.", "target_completion_date": "2023-12-31", "status": "Not Started"}'```
+```curl -X POST http://127.0.0.1:5000/api/courses -H "Content-Type: application/json" -d '{"name": "Learn Python", "description": "A comprehensive Python course.", "target_completion_date": "2023-12-31", "status": "Not Started"}'```
 
 ## Contributing
 
