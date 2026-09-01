@@ -21,7 +21,7 @@ code_craft_hub/
 
 ## Requirements
 
-- Python 3.6 or higher
+- Python 3.10 or higher
 - Flask
 
 ## Installation
