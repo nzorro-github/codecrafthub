@@ -14,5 +14,13 @@
         "target_date": "2026-09-01",
         "status": "In Progress",
         "created_at": "2026-09-01T14:13:59.398609"
+    },
+    {
+        "id": 3,
+        "name": "Software Developer Career Guide and Interview Preparation",
+        "description": "A coursera course authorized by IBM.",
+        "target_date": "2026-09-03",
+        "status": "Not Started",
+        "created_at": "2026-09-02T17:23:08.295384"
     }
 ]
