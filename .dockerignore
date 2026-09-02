@@ -1,0 +1,26 @@
+# Git and documentation
+.git
+.gitignore
+README.md
+
+# Virtual environments
+virtual_env/
+venv/
+.venv/
+env/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Frontend and test directories
+frontend/
+test/
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+
